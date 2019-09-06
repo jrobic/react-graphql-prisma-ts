@@ -16,7 +16,7 @@
     "lib": ["dom", "es2017", "esnext.asynciterable"], // you will need to include polyfills for es2017 manually
     "skipLibCheck": true,
     "target": "es5", // "es2015" for ES6+ engines
-    "module": "esnext", // "es2015" for tree-shaking
+    "module": "commonjs", // "es2015" for tree-shaking
     "moduleResolution": "node",
     "resolveJsonModule": true,
     // "noEmitOnError": false,
