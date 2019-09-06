@@ -1,0 +1,5 @@
+{
+  "extends": "@react-graphql-prisma-ts/config/tsconfig.json",
+  "compilerOptions": {},
+  "exclude": ["node_modules", "dist"]
+}

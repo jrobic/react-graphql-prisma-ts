@@ -1,10 +1,11 @@
 {
-  "name": "react-graphql-prisma-ts",
   "private": true,
   "version": "0.0.0",
   "description": "Boilerplate project with React, Node, GraphQL, Prisma and TypeScript",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "lerna run lint",
+    "build:deps": "lerna run build --scope=@react-graphql-prisma-ts/common",
+    "new-version": "lerna version --conventional-commits --yes"
   },
   "keywords": [
     "react",
@@ -20,6 +21,7 @@
   "author": "Jonathan Robic <hello@jonathanrobic.fr> (https://jonathanrobic.fr)",
   "license": "MIT",
   "devDependencies": {
+    "@react-graphql-prisma-ts/config": "0.0.1",
     "cz-conventional-changelog": "3.0.2",
     "lerna": "^3.16.4"
   },

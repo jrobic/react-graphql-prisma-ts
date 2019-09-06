@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["./node_modules/@react-graphql-prisma-ts/config"],
+  "rules": {}
+}
