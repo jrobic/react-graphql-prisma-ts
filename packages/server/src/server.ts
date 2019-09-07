@@ -5,13 +5,10 @@ import { GraphQLServer } from "graphql-yoga";
 import { MyRequest, StartServerResponse } from "./types/Server";
 import { MyContext } from "./types/Context";
 
-if (process.env.NODE_ENV === "production") {
-  // eslint-disable-next-line
-  require("dotenv").config();
-} else {
-  // eslint-disable-next-line global-require
-  require("../env");
-}
+// Routes
+import handleVersion from "./routes/version";
+
+require("./env");
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { prisma } = require("./generated/prisma-client");
@@ -37,7 +34,6 @@ morgan.token("graphql", (req: MyRequest) => {
 
 const startServer = async (cb?: Function): Promise<StartServerResponse> => {
   const PORT = process.env.NODE_ENV === "test" ? 0 : process.env.PORT || "4000";
-  console.log(PORT);
 
   const server = new GraphQLServer({
     typeDefs: typesMerged,
@@ -76,6 +72,8 @@ const startServer = async (cb?: Function): Promise<StartServerResponse> => {
       )
     );
   }
+
+  server.express.get("/version", handleVersion);
 
   const app = await server.start({
     port: PORT,

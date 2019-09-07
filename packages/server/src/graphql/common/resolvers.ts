@@ -1,12 +1,5 @@
 import { MyContext } from "../../types/Context";
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { name, version } = require("../../../package.json");
-
-interface VersionResponse {
-  name: string;
-  version: string;
-}
+import { ApiVersion, name, version } from "../../utils/version";
 
 interface StatusResponse {
   prisma: "ok" | "nok";
@@ -14,7 +7,7 @@ interface StatusResponse {
 
 export default {
   Query: {
-    version(): VersionResponse {
+    version(): ApiVersion {
       return {
         name,
         version

@@ -33,7 +33,8 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "composite": true,
-    "typeRoots": ["node_modules/@types", "src/types"]
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "types": ["jest", "node"]
   },
   "exclude": ["node_modules"],
   "include": ["./src/**/*.tsx", "./src/**/*.ts"]
