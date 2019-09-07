@@ -1,0 +1,9 @@
+type User {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  deletedAt: DateTime @deletedAt
+
+  email: String! @unique
+  name: String!
+}

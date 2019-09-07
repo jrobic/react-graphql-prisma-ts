@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "lerna run lint",
     "build:deps": "lerna run build --scope=@react-graphql-prisma-ts/common",
-    "new-version": "lerna version --conventional-commits --yes"
+    "new-version": "lerna version"
   },
   "keywords": [
     "react",
@@ -21,7 +21,6 @@
   "author": "Jonathan Robic <hello@jonathanrobic.fr> (https://jonathanrobic.fr)",
   "license": "MIT",
   "devDependencies": {
-    "@react-graphql-prisma-ts/config": "0.0.1",
     "cz-conventional-changelog": "3.0.2",
     "lerna": "^3.16.4"
   },

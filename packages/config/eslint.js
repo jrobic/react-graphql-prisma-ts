@@ -5,21 +5,21 @@ module.exports = {
     'airbnb',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module',
   },
   env: {
     browser: true,
     es6: true,
     node: true,
-    jest: true
+    jest: true,
   },
   rules: {
     // '@typescript-eslint/explicit-function-return-type': 'off',
@@ -27,6 +27,12 @@ module.exports = {
     // '@typescript-eslint/no-unused-vars': 'off',
   },
   overrides: [
+    // {
+    //   files: ['*.ts', '*.tsx'],
+    //   rules: {
+    //     '@typescript-eslint/no-var-requires': 'off',
+    //   },
+    // },
     {
       // Disable some rules in unit tests.
       files: ['test/**/*.ts', 'test/**/*.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
@@ -37,10 +43,10 @@ module.exports = {
     },
   ],
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  }
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };
