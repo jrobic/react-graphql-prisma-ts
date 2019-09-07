@@ -1,6 +1,6 @@
 {
   "name": "@react-graphql-prisma-ts/common",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
   "author": "Jonathan Robic <hello@jonathanrobic.fr> (https://jonathanrobic.fr)",
   "license": "MIT",
   "devDependencies": {
-    "@react-graphql-prisma-ts/config": "^0.1.1",
+    "@react-graphql-prisma-ts/config": "^0.2.0",
     "rimraf": "^3.0.0",
     "typescript": "3.5.3"
   }

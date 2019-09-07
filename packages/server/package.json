@@ -1,6 +1,6 @@
 {
   "name": "@react-graphql-prisma-ts/server",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "Jonathan Robic <hello@jonathanrobic.fr> (https://jonathanrobic.fr)",
   "license": "MIT",
   "devDependencies": {
-    "@react-graphql-prisma-ts/config": "^0.1.1",
+    "@react-graphql-prisma-ts/config": "^0.2.0",
     "@types/faker": "^4.1.5",
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.138",
