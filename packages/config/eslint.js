@@ -1,12 +1,6 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
-  extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
-  ],
+  plugins: ['prettier'],
+  extends: ['airbnb', 'plugin:prettier/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -21,18 +15,31 @@ module.exports = {
     node: true,
     jest: true,
   },
-  rules: {
-    // '@typescript-eslint/explicit-function-return-type': 'off',
-    // '@typescript-eslint/no-explicit-any': 'off',
-    // '@typescript-eslint/no-unused-vars': 'off',
-  },
   overrides: [
-    // {
-    //   files: ['*.ts', '*.tsx'],
-    //   rules: {
-    //     '@typescript-eslint/no-var-requires': 'off',
-    //   },
-    // },
+    {
+      // TypeScript config
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint', 'prettier'],
+      files: ['**/*.ts', '**/*.tsx'],
+      extends: [
+        'airbnb',
+        'plugin:@typescript-eslint/recommended',
+        'prettier/@typescript-eslint',
+        'plugin:prettier/recommended',
+      ],
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx', 'json'],
+          },
+        },
+      },
+      rules: {
+        // '@typescript-eslint/explicit-function-return-type': 'off',
+        // '@typescript-eslint/no-explicit-any': 'off',
+        // '@typescript-eslint/no-unused-vars': 'off',
+      },
+    },
     {
       // Disable some rules in unit tests.
       files: ['test/**/*.ts', 'test/**/*.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
@@ -42,11 +49,4 @@ module.exports = {
       },
     },
   ],
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
-  },
 };

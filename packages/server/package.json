@@ -6,11 +6,11 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --cls --no-notify src/index.ts",
-    "lint": "eslint ./src/**/*.ts",
+    "lint": "eslint --ignore-path ../../.eslintignore ./src ./scripts --ext js --ext ts",
     "build": "NODE_ENV=production tsc",
-    "postbuild": "ts-node ./scripts/post-build.ts",
+    "postbuild": "node ./scripts/post-build.js",
     "serve": "NODE_ENV=production node dist/index.js",
-    "test": "ts-node scripts/test.ts src"
+    "test": "node ./scripts/test.js src"
   },
   "keywords": [],
   "author": "Jonathan Robic <hello@jonathanrobic.fr> (https://jonathanrobic.fr)",

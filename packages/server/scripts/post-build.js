@@ -1,8 +1,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import fg from "fast-glob";
-import { copyFileSync } from "fs";
+const fg = require("fast-glob");
+const { copyFileSync } = require("fs");
 
-async function main(): Promise<void> {
+async function main() {
   const entries = await fg("./src/**/*.graphql");
 
   entries.forEach(entry => {

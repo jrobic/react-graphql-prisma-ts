@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import jest from "jest";
-import { execSync } from "child_process";
+const jest = require("jest");
+const { execSync } = require("child_process");
 
 require("../config/env");
 
@@ -23,7 +23,7 @@ process.on("unhandledRejection", err => {
   throw err;
 });
 
-function isInGitRepository(): boolean {
+function isInGitRepository() {
   try {
     execSync("git rev-parse --is-inside-work-tree", { stdio: "ignore" });
     return true;

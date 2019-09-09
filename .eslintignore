@@ -1,6 +1,5 @@
 serviceWorker.js
 **/node_modules
 **/coverage
-config
-generated
 **/dist
+generated
