@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint ./src/**/*.ts",
-    "build": "tsc"
+    "build": "rimraf ./dist tsconfig.tsbuildinfo &&  tsc"
   },
   "keywords": [],
   "author": "Jonathan Robic <hello@jonathanrobic.fr> (https://jonathanrobic.fr)",

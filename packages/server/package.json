@@ -2,12 +2,13 @@
   "name": "@react-graphql-prisma-ts/server",
   "version": "0.2.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "node src/index.js",
     "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --cls --no-notify src/index.ts",
     "lint": "eslint --ignore-path ../../.eslintignore ./src ./scripts --ext js --ext ts",
-    "build": "NODE_ENV=production tsc",
+    "build": "rimraf ./dist tsconfig.tsbuildinfo && NODE_ENV=production tsc",
     "postbuild": "node ./scripts/post-build.js",
     "serve": "NODE_ENV=production node dist/index.js",
     "test": "node ./scripts/test.js src"
@@ -31,6 +32,7 @@
     "fast-glob": "^3.0.4",
     "graphql": "^14.5.4",
     "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
     "supertest": "^4.0.2",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",

@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "outDir": "./dist",
+    "typeRoots": [
+      "node_modules/@types",
+      "../../node_modules/@types",
+      "src/types"
+    ],
+    "jsx": "react"
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["./src/**/*"],
+  "references": [
+    {
+      "path": "../common"
+    },
+    {
+      "path": "../config"
+    }
+  ]
+}
