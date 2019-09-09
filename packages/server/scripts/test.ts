@@ -5,7 +5,7 @@ import { execSync } from "child_process";
 require("../config/env");
 
 const argv = process.argv.slice(2);
-argv.push("--config=jest.json");
+argv.push("--config=jest.config.js");
 argv.push("--env=node");
 argv.push("--runInBand");
 
