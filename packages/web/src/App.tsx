@@ -1,8 +1,10 @@
 import React from 'react';
+import { ColorButton } from '@react-graphql-prisma-ts/ui';
+
 import logo from './logo.svg';
 import './App.css';
 
-const App: React.FC = () => {
+const App: React.FC = (): React.ReactElement => {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,6 +12,7 @@ const App: React.FC = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <ColorButton color="blue" data-testid="my-button" />
         <a
           className="App-link"
           href="https://reactjs.org"

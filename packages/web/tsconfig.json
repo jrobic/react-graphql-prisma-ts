@@ -16,14 +16,8 @@
     "composite": false,
     "allowJs": true
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts"
-  ],
-  "include": [
-    "src/**/*"
-  ],
+  "exclude": ["node_modules", "build", "scripts"],
+  "include": ["src/**/*"],
   "references": [
     {
       "path": "../common"

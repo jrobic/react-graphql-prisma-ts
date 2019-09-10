@@ -1,7 +1,7 @@
-import { createServer, ServerTest } from "./tests/common";
-import { App } from "./types/Server";
+import { createServer, ServerTest } from './tests/common';
+import { App } from './types/Server';
 
-describe("> Server", () => {
+describe('> Server', () => {
   let server: ServerTest;
   let app: App;
 
@@ -13,9 +13,9 @@ describe("> Server", () => {
     await app.close();
   });
 
-  test("should return api version", async () => {
+  test('should return api version', async () => {
     await server
-      .get("/version")
+      .get('/version')
       .expect(({ body }: any) => {
         expect(body.name).toBeDefined();
         expect(body.version).toBeDefined();

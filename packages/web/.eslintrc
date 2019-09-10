@@ -1,4 +1,8 @@
 {
   "root": true,
-  "extends": "../../.eslintrc"
+  "plugins": ["cypress"],
+  "extends": ["../../.eslintrc", "plugin:cypress/recommended"],
+  "env": {
+    "cypress/globals": true
+  }
 }
