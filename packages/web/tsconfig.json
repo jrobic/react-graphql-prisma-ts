@@ -1,0 +1,35 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "baseUrl": "./src",
+    "rootDir": "src",
+    "outDir": "./dist",
+    "typeRoots": [
+      "node_modules/@types",
+      "../../node_modules/@types",
+      "src/types"
+    ],
+    "isolatedModules": true,
+    "declaration": false,
+    "noEmit": true,
+    "composite": false,
+    "allowJs": true
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts"
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "references": [
+    {
+      "path": "../common"
+    },
+    {
+      "path": "../config"
+    }
+  ]
+}

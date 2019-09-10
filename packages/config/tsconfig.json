@@ -6,7 +6,7 @@
     "allowSyntheticDefaultImports": true, // no errors with commonjs modules interop
     "esModuleInterop": true, // enable to do "import React ..." instead of "import * as React ..."
     "checkJs": false, // typecheck js files
-    "declaration": true, // don't emit declarations
+    // "declaration": true, // don't emit declarations
     "emitDecoratorMetadata": true, // include only if using decorators
     "experimentalDecorators": true, // include only if using decorators
     "forceConsistentCasingInFileNames": true,
@@ -32,9 +32,13 @@
     "noImplicitThis": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "composite": true,
+    // "composite": true,
     "typeRoots": ["node_modules/@types", "src/types"],
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "isolatedModules": false,
+    "noEmit": false,
+    "declaration": true,
+    "composite": true
   },
   "exclude": ["node_modules"],
   "include": ["./src/**/*.tsx", "./src/**/*.ts"]
