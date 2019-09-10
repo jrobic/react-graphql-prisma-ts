@@ -1,6 +1,6 @@
 {
   "name": "@react-graphql-prisma-ts/ui",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
   "author": "Jonathan Robic <hello@jonathanrobic.fr> (https://jonathanrobic.fr)",
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "@react-graphql-prisma-ts/config": "^0.2.0",
+    "@react-graphql-prisma-ts/config": "^0.2.1",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-info": "^5.1.11",
     "@storybook/addon-knobs": "^5.1.11",
