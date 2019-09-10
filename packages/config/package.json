@@ -1,6 +1,7 @@
 {
   "name": "@react-graphql-prisma-ts/config",
   "version": "0.2.1",
+  "private": true,
   "description": "Shared dev-tools configuration files",
   "main": "index.js",
   "scripts": {
