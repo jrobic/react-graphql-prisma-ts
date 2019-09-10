@@ -2,5 +2,9 @@
 const config = require("@react-graphql-prisma-ts/config/jest.config");
 
 module.exports = {
-  ...config
+  ...config,
+  setupFiles: [
+    "<rootDir>/config/jest/setup.ts",
+    "<rootDir>/config/jest/mocks.ts"
+  ]
 };

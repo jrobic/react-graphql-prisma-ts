@@ -4,7 +4,9 @@
   "description": "Boilerplate project with React, Node, GraphQL, Prisma and TypeScript",
   "scripts": {
     "lint": "lerna run lint",
-    "build:deps": "lerna run build --scope=@react-graphql-prisma-ts/common",
+    "build:deps": "lerna run build --scope={@react-graphql-prisma-ts/common,@react-graphql-prisma-ts/ui}",
+    "build:server": "lerna run build --scope={@react-graphql-prisma-ts/common,@react-graphql-prisma-ts/server}",
+    "build:web": "lerna run build --scope={@react-graphql-prisma-ts/common,@react-graphql-prisma-ts/ui,@react-graphql-prisma-ts/web}",
     "new-version": "lerna version"
   },
   "keywords": [
@@ -29,9 +31,17 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "resolutions": {
+    "jest": "24.8.0",
+    "typescript": "3.5.3"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
+    ],
+    "nohoist": [
+      "**/rimraf",
+      "**/rimraf/**"
     ]
   }
 }

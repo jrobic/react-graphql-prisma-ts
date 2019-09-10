@@ -1,6 +1,4 @@
 module.exports = {
-  extends: [
-    './eslint',
-  ].map(require.resolve),
-  rules: {}
+  extends: ['./eslint'].map(require.resolve),
+  rules: {},
 };
